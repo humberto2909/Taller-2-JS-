@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 7</title>
+</head>
+
+<body>
+    <h2>Teclado</h2>
+    <p>Carácter: <span id="caracter">[ ]</span></p>
+    <p>Código: <span id="codigo">[ ]</span></p>
+
+    <script>
+        document.addEventListener("keydown", function (evento) {
+
+            const caracter = evento.key;
+            const codigo = evento.keyCode;
+
+            document.getElementById("caracter").textContent = `[${caracter}]`;
+            document.getElementById("codigo").textContent = `[${codigo}]`;
+        });
+    </script>
+
+</body>
+
+</html>

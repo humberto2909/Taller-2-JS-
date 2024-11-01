@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+</head>
+
+<body>
+
+    <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+    <button id="agregar">Añadir elemento</button>
+
+    <script>
+        const palabras = ["avion", "banana", "bicicleta", "arroz", "mesa", "estrella", "perro", "Rosa", "Transformador", "sandía"];
+        function agregarPalabraAleatoria() {
+            const palabraAleatoria = palabras[Math.floor(Math.random() * palabras.length)];
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = palabraAleatoria;
+            document.getElementById("lista").appendChild(nuevoElemento);
+        }
+
+        document.getElementById("agregar").addEventListener("click", agregarPalabraAleatoria);
+
+    </script>
+
+</body>
+
+</html>
